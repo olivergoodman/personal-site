@@ -5,12 +5,12 @@ class Page(db.Model):
 	name = db.Column(db.String(255))
 	page_hits = db.Column(db.Integer)
 
-	def __init__(self, name, page_hits):
+	def __init__(self, name): #initalize new page to 0 page_hits
 		name = self.name
-		page_hits = self.page_hits
+		page_hits = 0
 
 	def __repr__(self):
-		return '<Page %d>' % self.id
+		return '<Page %d>' % self.name
 
 	def visitPage(self):
-		self.page_hits = self.page_hits + 1
+		self.page_hits = self.page_hits + 1 #incrememnting page by 1 on visit --- ? 
