@@ -1,0 +1,40 @@
+<!-- parent template -->
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if title %} <!-- templates -->
+    <title>Oliver Goodman | {{ title }}</title>
+    {% else %}
+    <title>Oliver Goodman's Page</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="static/css/stylesheet.css">
+    <script type="text/javascript" src="/static/js/example.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/script.js"></script>
+  </head>
+
+  <div class="transparent">
+    <body>
+      <div id="nav">
+        <ul>
+          <li><a href="/">Home</a></li> <!-- how to get home/contact templates to be linked here ??-->
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div id="header">
+        {% block page_header %} <!-- templates -->
+        {% endblock %}
+      </div>
+
+      <div id="body">
+        {% block content %} <!-- templates -->
+        {% endblock %}
+        <button type="button" onclick="changeBGColor()">Click to change background</button>
+      </div>
+    
+    </body>
+  </div>
+</html>

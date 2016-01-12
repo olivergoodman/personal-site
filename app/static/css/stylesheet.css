@@ -1,0 +1,147 @@
+* {
+	font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+html {
+	height: 100%;
+	background: url(http://imagine.pics/images/683/68359.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	position: relative;
+}
+
+.transparent{
+	background:rgba(0,0,0,0.5);;
+}
+
+.transparent-short{ /*for pages that don't scroll*/
+	background:rgba(0,0,0,0.5);
+	height: 100%;
+}
+
+body {
+	/*background-color:rgba(0,0,0,0.5);*/
+	margin: 0;
+	height: 100%;
+}
+
+#nav {
+	height: 50px;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding-right: 10px;
+    float: right;
+}
+
+#nav li {
+    float: left;
+    border-left: 1px solid white; 
+}
+
+#nav ul li:last-child {  
+	border-right: 1px solid white; 
+}
+
+#nav a {
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    transition: .5s;
+}
+
+#nav a:hover{
+	opacity: 0.5;
+}
+
+div.slideL, div.slideR{
+	position:relative;
+}
+
+/* The fade in animation code */
+@keyframes fade_in {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
+}
+
+#prof-wrapper{
+	position: absolute;
+	margin-left: 88px;
+	margin-top: -25px;
+}
+
+#profpic {
+	width: 25%;
+	border-radius: 50px;
+}
+
+#header {
+	color: white;
+	height: 120px;
+	margin: 10px;
+	animation-name: fade_in;
+    animation-duration: 5s;
+}
+
+h1 {
+	color : white;
+	font-size: 5em;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.5em;
+	text-align: center;
+	word-spacing: 0;
+	margin-left: 0px; /*change left margin and alignment for sliding*/
+}
+
+#body {
+	color: white;
+	margin: 0;
+	text-align: right;
+}
+
+#body p{
+	margin: 50px;
+	text-align: left;
+}
+
+#contact {
+	height: 50px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding-right: 10px;
+    float: left;
+}
+
+#contact a {
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    transition: .5s;
+}
+
+#mail-icon, #github-icon, #linkedin-icon, #phone-icon{
+	width: 50%;
+	height: 50%;
+}
+
+#mail-icon:hover, #github-icon:hover, #linkedin-icon:hover, #phone-icon:hover{
+	opacity: 0.7;
+}
+
+button {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
