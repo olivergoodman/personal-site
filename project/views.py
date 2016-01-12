@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, Blueprint
+from flask import Flask, render_template
 from project import app, db
 from project.models import Page
 
@@ -11,34 +11,16 @@ contact_page = Page("contact", 0)
 def index():
   page_title = 'Oliver Goodman' 
   print 'index was called'
-  displayTable()
+  index_page.visitPage()
   return render_template('index.html',
                           title = "Oliver Goodman | Home",
                           page_title = page_title)
 
 @app.route('/contact')
 def contact(): 
-  displayTable()
   page_title = 'Contact'
+  index_page.visitPage()
   return render_template('contact.html',
-							title = 'Oliver Goodman | Contact',
-							page_title = page_title)
+							           title = 'Oliver Goodman | Contact',
+							           page_title = page_title)
 
-
-##example stuff
-# def index():
-#     user = {'nickname': 'Miguel'}  # fake user
-#     posts = [  # fake array of posts
-#         { 
-#             'author': {'nickname': 'John'}, 
-#             'body': 'Beautiful day in Portland!' 
-#         },
-#         { 
-#             'author': {'nickname': 'Susan'}, 
-#             'body': 'The Avengers movie was so cool!' 
-#         }
-#     ]
-#     return render_template("index.html",
-#                            title='Home',
-#                            user=user,
-#                            posts=posts)

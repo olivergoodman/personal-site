@@ -11,3 +11,6 @@ class Page(db.Model):
 
 	def __repr__(self):
 		return '<Page %d>' % self.id
+
+	def visitPage(self):
+		self.page_hits = self.page_hits + 1
